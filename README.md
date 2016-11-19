@@ -1,2 +1,2 @@
 # config
-Collection scirpts for setting up linux boxes
+Collection scripts for setting up linux boxes
