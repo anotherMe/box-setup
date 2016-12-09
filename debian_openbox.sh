@@ -28,8 +28,8 @@ echo Get ready for VBox additions
 apt-get -y install build-essential linux-headers-amd64
 
 echo Checking out Openbox configuration files
-cp -r config/.config/openbox /home/${MYUSER}/.config/
-cp -r config/.config/gtk-3.0 /home/${MYUSER}/.config/
+cp -r .config/openbox /home/${MYUSER}/.config/
+cp -r .config/gtk-3.0 /home/${MYUSER}/.config/
 
 
 echo Fix permission
