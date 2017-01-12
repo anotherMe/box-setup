@@ -6,11 +6,15 @@ A bash script for to set up an OpenBox environment on Debian.
 
 Script applies to a Debian minimal install provided with git, sudo and a user in the sudo group:
 
+```bash
   # apt-get install git sudo
   # gpasswd -a YOURUSER sudo
+```
 
 Log in with your user and:
 
+```bash
   $ git clone https://github.com/anotherMe/config
   $ cd config
   $ ./debian_openbox.sh
+```
