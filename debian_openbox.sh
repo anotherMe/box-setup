@@ -20,6 +20,7 @@ apt-get -y install ntp vim screen htop
 
 echo Installing OpenBox and Slim
 apt-get -y install xorg xinit openbox openbox-menu obconf obmenu lxappearance tint2 nitrogen pcmanfm gmrun slim
+cp -r /etc/xdg/openbox /home/${MYUSER}/.config/
 
 echo Installing goodies
 apt-get -y install vim terminator geany firefox-esr htop screen
