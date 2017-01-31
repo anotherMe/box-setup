@@ -18,6 +18,6 @@
 
 tint2 &
 nitrogen --restore &
-
-# mate-power-manager &
+mate-power-manager &
+volumeicon &
 

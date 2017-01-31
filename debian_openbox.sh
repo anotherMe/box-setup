@@ -1,6 +1,8 @@
 #!/bin/bash
 
-MYUSER=marco
+MYUSER=""
+PACKAGES=""
+
 
 # Make sure only root can run our script
 if [ "$(id -u)" != "0" ]; then
@@ -8,34 +10,70 @@ if [ "$(id -u)" != "0" ]; then
    exit 1
 fi
 
-echo Upgrading sistem
-apt-get update && apt-get -y upgrade
+# Read unprivileged user name
+read -p "Please insert unprivileged user name: " -r
+echo
+MYUSER=$REPLY
 
-echo Sudo installation & configuration
-apt-get -y install sudo
-gpasswd -a $MYUSER sudo
+read -p "Is $MYUSER correct [yY/nN] ? " -n 1 -r
+echo
+if [[ ! $REPLY =~ ^[Yy]$ ]]
+then
+	echo Exiting
+	exit
+fi
 
-echo Installing bare minimum
-apt-get -y install ntp vim screen htop
 
-echo Installing window manager and desktop tools
-apt-get -y install xorg xinit openbox openbox-menu obconf obmenu lxappearance tint2 nitrogen pcmanfm gmrun
-cp -r /etc/xdg/openbox /home/${MYUSER}/.config/
+read -p "Update system before proceeding [yY/nN]? " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+	echo Upgrading system ...
+	apt-get update && apt-get -y upgrade
+fi
 
-echo Installing display manager
-apt-get -y install lightdm
 
-echo Installing goodies
-apt-get -y install vim terminator geany firefox-esr htop screen
+read -p "Install sudo and add user to sudoers [yY/nN]? " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+	echo Installing sudo ...
+	apt-get -y install sudo
+	gpasswd -a $MYUSER sudo
+fi
 
-echo Get ready for VBox additions
-apt-get -y install build-essential linux-headers-amd64
+
+# bare minimum
+PACKAGES+=" vim screen htop screen iptraf ntp "
+
+# window manager and desktop tools
+PACKAGES+=" xorg xinit openbox openbox-menu obconf obmenu lxappearance tint2 nitrogen pcmanfm gmrun lightdm xscreensaver"
+
+# other desktop tools
+PACKAGES+=" mate-power-manager network-manager-gnome network-manager-openvpn-gnome volumeicon-alsa"
+
+# goodies
+PACKAGES+=" vim terminator geany firefox-esr qt4-qtconfig faenza-icon-theme"
+
+# Dropbox dependencies
+PACKAGES+=" libxslt1.1 "
+
+# Samsung N900 firmware
+#PACKAGES+= firmware-realtek firmware-brcm80211  
+
+# Get ready for VBox additions
+PACKAGES+=" build-essential linux-headers-amd64"
+
+echo Installing ...
+sudo apt-get install -y $PACKAGES
+
 
 echo Checking out Openbox configuration files
+cp -r /etc/xdg/openbox /home/${MYUSER}/.config/
 cp -r .config/openbox /home/${MYUSER}/.config/
 cp -r .config/gtk-3.0 /home/${MYUSER}/.config/
 
 
-echo Fix permission
+echo Fixing permission
 chown -R $MYUSER:$MYUSER /home/${MYUSER}/.config
 
