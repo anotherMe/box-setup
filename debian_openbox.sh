@@ -47,7 +47,7 @@ fi
 PACKAGES+=" vim screen htop screen iptraf ntp "
 
 # window manager and desktop tools
-PACKAGES+=" xorg xinit openbox openbox-menu obconf obmenu lxappearance tint2 nitrogen pcmanfm gmrun lightdm light-locker"
+PACKAGES+=" xorg xinit openbox openbox-menu obconf obmenu lxappearance tint2 nitrogen pcmanfm gmrun lightdm light-locker xarchiver"
 
 # other desktop tools
 PACKAGES+=" mate-power-manager network-manager-gnome network-manager-openvpn-gnome volumeicon-alsa"
