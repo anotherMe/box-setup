@@ -72,6 +72,7 @@ echo Checking out Openbox configuration files
 cp -r /etc/xdg/openbox /home/${MYUSER}/.config/
 cp -r .config/openbox /home/${MYUSER}/.config/
 cp -r .config/gtk-3.0 /home/${MYUSER}/.config/
+cp -r .config/tint2 /home/${MYUSER}/.config/
 
 
 echo Fixing permission
