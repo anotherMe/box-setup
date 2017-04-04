@@ -117,12 +117,12 @@ battery_padding = 1 0
 battery_background_id = 0
 
 # Launchers
-launcher_icon_theme = LinuxLex-8
+launcher_icon_theme = Faenza
 launcher_padding = 5 0 10
 launcher_background_id = 9
 launcher_icon_size = 85
 launcher_item_app = /usr/share/applications/terminator.desktop
 launcher_item_app = /usr/share/applications/firefox-esr.desktop
-#launcher_item_app = /usr/share/applications/pcmanfm.desktop
+launcher_item_app = /usr/share/applications/pcmanfm.desktop
 
 # End of config
