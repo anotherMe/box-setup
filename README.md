@@ -1,22 +1,8 @@
 # config
 
-A bash script to set up an OpenBox environment on Debian.
+A collection of bash scripts and resources to set up linux boxes.
 
-## Install
+## Use
 
-Script applies to a Debian minimal install provided with git, sudo and a user in the sudo group.
-
-As root:
-
-```bash
-  apt-get install git sudo
-  gpasswd -a YOURUSER sudo
-```
-
-Log in with your user and:
-
-```bash
-  git clone https://github.com/anotherMe/config
-  cd config
-  sudo ./debian_openbox.sh
-```
+In order to use this scritps you have to first install **git** and
+clone this repository.
