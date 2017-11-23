@@ -46,7 +46,10 @@ fi
 
 
 # bare minimum
-PACKAGES+=" vim screen htop iptraf ntp net-tools"
+PACKAGES+=" ntp vim screen htop"
+
+# network tools
+PACKAGES+=" htop iftop iptraf dnstools net-tools"
 
 # window manager and desktop tools
 PACKAGES+=" xorg xinit openbox openbox-menu obconf obmenu lxappearance tint2 nitrogen pcmanfm gmrun lightdm light-locker xarchiver"
@@ -57,14 +60,16 @@ PACKAGES+=" terminator geany "
 # other desktop tools
 PACKAGES+=" mate-power-manager network-manager-gnome network-manager-openvpn-gnome volumeicon-alsa"
 
+# goodies
 PACKAGES+=" qt4-qtconfig faenza-icon-theme"
 
+# browsers
 PACKAGES+=" firefox-esr chromium"
 
 # Dropbox dependencies
 # PACKAGES+=" libxslt1.1 "
 
-# Samsung N900 firmware
+# proprietary firmwares
 #PACKAGES+= firmware-realtek firmware-brcm80211
 
 # Get ready for VBox additions
