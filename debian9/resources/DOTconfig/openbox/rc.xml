@@ -336,11 +336,35 @@
         <command>gmrun</command>
       </action>
     </keybind>
-    <keybind key="0x85"> <!-- the W modifier alone is not recognized -->
+    <!--<keybind key="0x85"> <!-- the W modifier alone is not recognized -->
       <action name="Execute">
         <command>gmrun</command>
       </action>
-    </keybind>  
+    </keybind>-->
+    <keybind key="W-Left">
+        <action name="UnmaximizeFull"/>
+        <action name="MoveResizeTo">
+          <x>0</x>
+          <y>0</y>
+          <width>50%</width>
+          <height>100%</height>
+        </action>
+    </keybind>
+    <keybind key="W-Right">
+        <action name="UnmaximizeFull"/>
+        <action name="MoveResizeTo">
+          <x>1/2</x>
+          <y>0</y>
+          <width>50%</width>
+          <height>100%</height>
+        </action>
+    </keybind>
+    <keybind key="W-Down">
+        <action name="Iconify"/>
+    </keybind>
+    <keybind key="W-Up">
+        <action name="Maximize"/>
+    </keybind>
     <keybind key="A-f">
       <action name="Execute">
         <command>pcmanfm</command>
