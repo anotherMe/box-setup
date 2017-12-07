@@ -85,6 +85,11 @@ cp -r resources/DOTconfig/openbox /home/${MYUSER}/.config/
 cp -r resources/DOTconfig/gtk-3.0 /home/${MYUSER}/.config/
 cp -r resources/DOTconfig/tint2 /home/${MYUSER}/.config/
 
+echo Checking out atom.io configuration files
+if [ ! -d "/home/${MYUSER}/.atom/" ]; then
+	mkdir "/home/${MYUSER}/.atom/"
+fi
+cp -r resources/DOTatom/keymap.cson /home/${MYUSER}/.atom/
 
 echo Fixing permission
 chown -R $MYUSER:$MYUSER /home/${MYUSER}/.config
