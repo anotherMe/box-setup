@@ -100,8 +100,8 @@ tooltip_font = sans 10
 tooltip_font_color = #000000 80
 
 # Mouse
-mouse_middle = close
-mouse_right = none
+mouse_middle = none
+mouse_right = close
 mouse_scroll_up = iconify
 mouse_scroll_down = toggle
 
