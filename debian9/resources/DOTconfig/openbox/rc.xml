@@ -336,11 +336,6 @@
         <command>gmrun</command>
       </action>
     </keybind>
-    <keybind key="0x85"> <!-- the W modifier alone is not recognized -->
-      <action name="Execute">
-        <command>gmrun</command>
-      </action>
-    </keybind>-->
     <keybind key="W-Left">
         <action name="UnmaximizeFull"/>
         <action name="MoveResizeTo">
