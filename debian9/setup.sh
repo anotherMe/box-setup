@@ -1,13 +1,12 @@
 #!/bin/bash
 
-# Read unprivileged user name
 
 MYUSER=""
-read -p "Please insert unprivileged user name: " -r
+read -p "Please insert your unprivileged user name: " -r
 echo
 MYUSER=$REPLY
 
-read -p "Is $MYUSER correct [yY/nN] ? " -n 1 -r
+read -p "Running script for user $MYUSER. Is this correct [y/n] ? " -n 1 -r
 echo
 if [[ ! $REPLY =~ ^[Yy]$ ]]
 then
