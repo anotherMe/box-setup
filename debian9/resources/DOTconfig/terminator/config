@@ -1,0 +1,24 @@
+[global_config]
+  window_state = maximise
+  title_inactive_fg_color = "#0f0f89"
+  title_transmit_bg_color = "#40e7bb"
+[keybindings]
+[profiles]
+  [[default]]
+    use_system_font = False
+    font = Monospace 11
+    background_color = "#25387a"
+    background_image = None
+    foreground_color = "#45d0f1"
+  [[matrix]]
+    background_image = None
+    foreground_color = "#00ff00"
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]
