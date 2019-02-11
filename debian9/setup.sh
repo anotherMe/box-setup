@@ -48,10 +48,10 @@ fi
 PACKAGES+=" ntp vim screen htop"
 
 # network tools
-PACKAGES+=" iftop tcpdump iptraf dnsutils net-tools nmap tshark"
+PACKAGES+=" iftop tcpdump iptraf dnsutils net-tools nmap"
 
 # window manager and desktop tools
-PACKAGES+=" xorg xinit openbox openbox-menu obconf obmenu lxappearance tint2 nitrogen pcmanfm gmrun lightdm light-locker xarchiver"
+PACKAGES+=" xorg xinit openbox openbox-menu obconf obmenu lxappearance tint2 nitrogen pcmanfm gmrun lightdm light-locker xarchiver seahorse"
 
 # tools
 PACKAGES+=" terminator geany "
