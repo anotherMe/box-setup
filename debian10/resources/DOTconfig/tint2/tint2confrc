@@ -1,0 +1,7 @@
+#---------------------------------------------
+# TINT2CONF CONFIG FILE
+default_theme = /home/marco/.config/tint2/default.tint2rc
+cmd_property = /usr/bin/env python /usr/bin/tintwizard.py
+width = 926
+height = 400
+

@@ -1,0 +1,16 @@
+
+
+'atom-workspace atom-text-editor:not([mini])':
+  'ctrl-\\': 'editor:toggle-line-comments'
+
+'.platform-win32, .platform-linux':
+  'ctrl-shift-\\': 'tree-view:toggle'
+
+# Bookmarks navigation
+
+'.platform-linux atom-text-editor':
+  'ctrl-shift-m': 'bookmarks:toggle-bookmark'
+
+'atom-text-editor':
+  'ctrl-:': 'bookmarks:jump-to-next-bookmark'
+  'ctrl-;': 'bookmarks:jump-to-previous-bookmark'
